@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Movies</title>
+
+    <!-- css link  -->
+    <link rel="stylesheet" href="trending.css">
+
+    <script src="https://kit.fontawesome.com/b89a637984.js" crossorigin="anonymous"></script>
+    <!-- font link  -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+
+
+    <!-- bootstrap link -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #12122b;font-family: 'Montserrat', sans-serif;">
+    <div id="home-page" class=" container page-header">
+        <nav class="nav-bar navbar-expand-lg fixed top p-3">
+            <div class="d-flex flex-row justify-content-around">
+                <div class="">
+                    <a class="text-decoration-none" href="movieLanding.html" id="logo-link">
+                        <h2><Span class="text-white">Cine</Span><SPan class="text-primary">Flix</SPan></h2>
+                    </a>
+                </div>
+                <div class="input-group text-center justify-content-end">
+                    <!-- <input type="text" class='text-black' id="search-text" placeholder="search movie.."
+                    aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+                    <div class="input-group-append">
+                        <a class="text-decoration-none" href="topRatedMovies.html"><button
+                            class="btn btn-sm btn-light text-black ">Top-Rated movies</button>
+                        </a>
+                        <a class="text-decoration-none" href="onGoing.html"><button
+                            class="btn btn-sm btn-light text-black ">Recent movies</button>
+                        </a>
+                        <a class="text-decoration-none" href="trending.html"><button
+                            class="btn btn-sm btn-light text-black ">Trending movies</button>
+                        </a>
+                        <a class="text-decoration-none bg-primary text-" href="start.html"><button
+                            class="btn btn-sm btn-primary text-white">Search movie</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <hr>
+    <h2 class="container text-white">Trending movies</h2><br>
+    <div id="cont" class="container">
+    </div>
+    <script src="trending.js"></script>
+    <script src="start.js"></script>
+</body>
+
+
+</html>
