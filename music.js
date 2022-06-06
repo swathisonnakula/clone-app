@@ -11,7 +11,7 @@ searchButton.addEventListener('click', (e) => {
     const xhr = new XMLHttpRequest();
     xhr.open("GET", url);
 
-    xhr.setRequestHeader("Authorization", "Bearer BQBno9x7x2409FE418fl42aO3AFennAAuqvSPn268bGKVNKxIFtXnI6maF38s9ZBrJU8YqAazb0TdQUn1kw")
+    xhr.setRequestHeader("Authorization", "Bearer BQCwI38KDli5eWFPcXREHWWstSA9Bl9PlD3SaIKdCxdxMDpfzfB3JduVE6LfkQv58mlUoqOLGSiRJ6AcYC8")
     xhr.setRequestHeader("Accept", "application/json")
     xhr.setRequestHeader("Content-Type", "application/json")
 

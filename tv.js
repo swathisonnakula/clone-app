@@ -29,7 +29,7 @@ searchButton.addEventListener('click', (e) => {
                         <div class="card mb-3" style="max-width: 840px";background-color: #b3b3b3;">
           <div class="row g-0 style="background-color:#b3b3b3;">
             <div class="col-md-4" >
-              <img src="https://image.tmdb.org/t/p/w500/${result.poster_path}" style="background-color:#b3b3b3;class="img-fluid rounded-start" alt="...">
+              <img src="https://image.tmdb.org/t/p/w500/${result.poster_path}" height="400px"width="300px"style="background-color:#b3b3b3;class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8 p-3 " style="background-color:  #b3b3b3;">
               <div class="card-body "style="background-color: #b3b3b3;">
