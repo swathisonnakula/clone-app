@@ -2,34 +2,34 @@ var video = document.getElementById("video")
 const searchButton = document.getElementById('search-btn')
 
 searchButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    // console.log('clicked');
+  e.preventDefault()
+  // console.log('clicked');
 
-    const searchText = document.getElementById('search-text').value
-    // console.log(searchText)
-    if (searchText == '') {
-        alert("Enter the movie name")
-    }
-    else {
+  const searchText = document.getElementById('search-text').value
+  // console.log(searchText)
+  if (searchText == '') {
+    alert("Enter the movie name")
+  }
+  else {
 
-        const apiKey = `6f584776d7f9c9d7af359da7e827ab71`
-        const url1 = `https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&query=${searchText}`
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", url1);
+    const apiKey = `6f584776d7f9c9d7af359da7e827ab71`
+    const url1 = `https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&query=${searchText}`
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url1);
 
-        xhr.onreadystatechange = () => {
-            if (xhr.status === 200 && xhr.readyState === 4) {
-                const response = JSON.parse(xhr.responseText);
-                console.log(response);
+    xhr.onreadystatechange = () => {
+      if (xhr.status === 200 && xhr.readyState === 4) {
+        const response = JSON.parse(xhr.responseText);
+        console.log(response);
 
-                let output = "";
-                response.results.forEach(result => {
-                    output +=
-                        `
+        let output = "";
+        response.results.forEach(result => {
+          output +=
+            `
                         <div class="card mb-3" style="max-width: 840px";background-color: #b3b3b3;">
           <div class="row g-0 style="background-color:#b3b3b3;">
             <div class="col-md-4" >
-              <img src="https://image.tmdb.org/t/p/w500/${result.poster_path}" style="background-color:#b3b3b3;"class="img-fluid rounded-start" alt="...">
+              <img src="https://image.tmdb.org/t/p/w500/${result.poster_path}" style="background-color:#b3b3b3;class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8 p-3 " style="background-color:  #b3b3b3;">
               <div class="card-body "style="background-color: #b3b3b3;">
@@ -41,22 +41,22 @@ searchButton.addEventListener('click', (e) => {
             </div>
           </div>
         </div>`
-                    const genreId = `${result.id}`
-                    // console.log(genreId);
-                    document.querySelector("#show-view").innerHTML += output;
-                    document.getElementById('search-text').value = ''
-                    // document.getElementById("#movie-view").display = ""
-                    // getvideo(movieId)
+          const genreId = `${result.id}`
+          // console.log(genreId);
+          document.querySelector("#show-view").innerHTML += output;
+          document.getElementById('search-text').value = ''
+          // document.getElementById("#movie-view").display = ""
+          // getvideo(movieId)
 
 
-                })
+        })
 
 
 
-            }
-        };
-        xhr.send();
-    }
+      }
+    };
+    xhr.send();
+  }
 });
 {/* <div class=" container d-flex flex-row p-2 justify-content-between">
 
